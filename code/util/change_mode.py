@@ -7,8 +7,9 @@ def toggle_appearance(main, button, mode):
         ctk.set_appearance_mode("light")
         button.configure(image=images_open.moon)
         main.configure(fg_color=colors.background_light)
-    elif mode == "light":
+    else:
         mode = "dark"
+        ctk.set_appearance_mode("dark")
         button.configure(image=images_open.sun)
-        ctk.set_appearance_mode("light")
         main.configure(fg_color=colors.background)
+    return mode
